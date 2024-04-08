@@ -1,0 +1,70 @@
+
+
+
+body{
+    background-color: rgba(53, 171, 214, 0.765);
+}
+
+header{
+    text-align: center;
+
+}
+.contenedor_Principal {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 5px; /* Espacio entre las cajas */
+    color: white
+}
+
+.car {
+    width: 400px;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: brown;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8) /* offsetX, offsetY, blurRadius, color */
+  
+}
+
+a{
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+    
+}
+
+
+a:hover{
+    color: brown;
+    cursor: pointer;
+    font-size:40px ;
+    
+}
+
+/* 
+
+
+
+3. `background-size: cover;`: Hace que la imagen de fondo se ajuste al tamaño del contenedor `.car`, cubriendo todo el área posible sin distorsionar la relación de aspecto.
+
+4. `background-position: center;`: Centra la imagen de fondo horizontal y verticalmente dentro del contenedor `.car`.
+
+5. `display: flex;`: Establece el contenedor `.car` como un contenedor flexible, lo que permite controlar fácilmente la alineación y el posicionamiento de sus elementos secundarios.
+
+6. `align-items: center;`: Alinea verticalmente los elementos secundarios del contenedor `.car` al centro.
+
+7. `justify-content: center;`: Alinea horizontalmente los elementos secundarios del contenedor `.car` al centro.
+
+8. `color: white;`: Establece el color del texto dentro del elemento `.car` en blanco.
+
+9. `font-family: Arial, sans-serif;`: Define la familia de fuentes a utilizar para el texto dentro del elemento `.car`, dando preferencia a Arial y luego a cualquier fuente sans-serif disponible.
+
+10. `font-size: 24px;`: Establece el tamaño del texto dentro del elemento `.car` en 24 píxeles.
+
+11. `text-align: center;`: Alinea el texto dentro del elemento `.car` al centro horizontalmente.*/

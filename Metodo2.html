@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/Style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
+</head>
+<body>
+    
+
+<div class="DivImg1">
+    <h1>
+        COSTO DE MANTENIMIENTO O TRANSPORTE
+    </h1>
+
+    <img src="imagenes/eoq.jpg" alt=""  width="200px"><br>
+
+    <h2> </h2><br>
+
+   <form action="" class="formulario">
+
+<label for="">Horas</label>
+    <input type="number" id="horas"  min="0" step="0.01"> <br>
+    
+    <label for="">Duracion de la tarea</label>
+    <input type="number" id="duracion"  min="0" step="0.01"> <br>
+
+
+    <label for="">MTBF (Elija como sacarlo) </label>
+    
+    <select name="" id="opciones">
+        <option value="porcentaje">por porcentaje</option>
+        <option value="normal">normal</option>
+
+
+    </select> <br>
+    <div class="divradio2"   id="radio-inputs" >
+
+       
+        <input type="radio" id="anual" name="frecuencia" value="hora" class="radio">
+        <label for="anual">Horas</label>
+        
+        <input type="radio" id="semanal" name="frecuencia" value="tareasopercionales" class="radio">
+        <label for="semanal">T.Operacionales</label>
+        
+        <input type="radio" id="diaria" name="frecuencia" value="costofallaunica" class="radio">
+        <label for="diaria">Falla unica</label> <br>
+
+    </div><br>
+    
+    <input type="number" id="mtbf"  min="0" step="0.01"> 
+   
+    
+
+    <label for="">costo por hora de trabajo</label>
+    <input type="number" id="costo-horas-trabajo"   min="0" step="0.01"><br>
+    <label for="">Repuestos</label>
+    <input type="number" id="repuestos"  min="0" step="0.01"><br>
+
+
+    <label for="">Costo tareas operacionales</label>
+    <input type="number" id="tareas-operacionales"   min="0" step="0.01"> <br>
+
+    <label for="">Retraso logistico</label>
+    <input type="number" id="retraso"  value="0"   min="0" step="0.01"><br>
+
+    <label for="">Costo unitario por paradaa</label>
+    <input type="number" id="costo-unitario-parada"   min="0" step="0.01"><br>
+
+    <label for="">Costo falla unica</label>
+    <input type="number" id="falla-unica"   min="0" step="0.01"><br>
+
+
+
+    <button class="BotonCalcular" id="calcularBtn2">Calcular</button> <br>
+    <label for="resultado" id="resultado2"> </label>
+    <button class="BotonCalcular" id="limpiarBtn">Limpiar</button> <br>
+
+   </form>
+
+</div>
+
+<script src="js/calculos2.js"></script>
+
+</body>
+
+
+
+<script>
+    // Obtener elementos del DOM
+    const select = document.getElementById('opciones');
+    const radioInputs = document.getElementById('radio-inputs');
+  
+    // Agregar evento change al select
+    select.addEventListener('change', function() {
+      // Obtener el valor seleccionado del combo box
+      const selectedOption = select.value;
+      
+      // Mostrar los radio inputs solo si se selecciona la opción específica
+      if (selectedOption === 'porcentaje') {
+        radioInputs.style.display = 'block';
+      } else {
+        radioInputs.style.display = 'none';
+      }
+    });
+  </script>
+
+</html>

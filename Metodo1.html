@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/Style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
+</head>
+<body>
+    
+
+<div class="DivImg1">
+    <h1>
+        Método EOQ
+    </h1>
+
+    <img src="imagenes/eoq.jpg" alt=""  width="200px"><br>
+
+   
+
+   <form action="" class="formulario">
+
+    <label for="">Ingrese demanda</label>
+    <input type="number" id="demanda" min="0" step="0.01"> <br>
+
+    
+    <div class="divradio">
+
+        <label for="">Tiempo del pedido</label>
+        <input type="number" id="Tiempo" min="0" step="0.01"><br><br>
+        <input type="radio" id="anual" name="frecuencia" value="anual" class="radio">
+        <label for="anual">Anual</label>
+        
+        <input type="radio" id="semanal" name="frecuencia" value="mensual" class="radio">
+        <label for="semanal">Mensual</label>
+        
+        <input type="radio" id="diaria" name="frecuencia" value="semanal" class="radio">
+        <label for="diaria">Semanal</label> <br>
+
+    </div><br>
+    
+    
+
+    <label for="">Ingrese costo de hacer pedido</label>
+    <input type="number" id="costo_pedido" min="0" step="0.01"><br>
+    <label for="">Ingrese Costo de Mantenimiento</label>
+    <input type="number" id="costo_mantenimiento" min="0" step="0.01"><br>
+
+
+
+
+    <button class="BotonCalcular" id="calcularBtn">Calcular</button> <br>
+    <button class="BotonCalcular" id="limpiarBtn">Limpiar</button> <br>
+
+
+
+    <label for="resultado" id="resultado"> </label>
+
+   </form>
+
+</div>
+
+<script src="js/calculos.js"></script>
+
+</body>
+</html>
